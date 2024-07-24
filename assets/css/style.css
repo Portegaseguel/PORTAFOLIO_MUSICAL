@@ -1,0 +1,438 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #000;
+    color: #fff;
+}
+
+.header {
+    background: #333;
+    padding: 20px 0;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.profile {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #39bdef;
+    transform: scale(1.4);
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 2.5em;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 3.5em;
+}
+
+.about, .social, .music, .photos, .events, .contact {
+    margin-bottom: 50px;
+    margin-top: 150px;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: center;
+    
+}
+
+.about {
+    padding: 20px 0;
+}
+
+.about .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glowing-card {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto; /* Centro horizontal */
+    padding: 0 15px; /* Añadir padding para evitar que las cards se vean pegadas a los bordes */
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(137deg, #39bdef 0%, #333 100%);
+    transition: 0.3s ease;
+    border-radius: 30px;
+    filter: drop-shadow(0px 0px 30px #);
+    
+}
+
+.card::after {
+    content: '';
+    background-color: #181818;
+    position: absolute;
+    z-index: 1;
+    transition: 0.3s ease;
+    height: 98%;
+    width: 98%;
+    top: 1%;
+    left: 1%;
+    border-radius: 28px;
+}
+
+.card:hover {
+    filter: drop-shadow(0px 0px 30px #39bdef);
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 0;
+}
+
+.about p {
+    font-size: 1.2em;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.music-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.music-links li {
+    margin: 10px 0;
+    width: 100%; /* Ensures each item takes full width */
+    max-width: 300px; /* Set a max width to standardize the size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-links li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #39bdef;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+    width: 100%;
+    height: 80px; /* Standardize the height */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.music-links li a .icon {
+    font-size: 2.5em; /* Adjust icon size */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.music-links li a:hover {
+    background: #39bdef;
+    color: #000;
+}
+
+
+.social-media-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-media-links li {
+    margin: 10px 15px;
+}
+
+.social-media-links li a {
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #39bdef;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.social-media-links li a:hover {
+    background: #39bdef;
+    color: #000;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photo-gallery img {
+    width: 300px;
+    margin: 10px 0;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #39bdef;
+}
+
+.slick-slide {
+    margin: 0 10px;
+}
+
+.slick-slide img {
+    border-radius: 10px;
+}
+
+/* Opcional: estilo de los puntos de navegación y flechas */
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #39bdef;
+}
+
+.slick-prev, .slick-next {
+    color: #39bdef;
+}
+
+.events .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-list {
+    list-style: none;
+    padding: 0;
+}
+
+.event-list li {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #222;
+    color: #fff;
+}
+
+.contact form button {
+    padding: 15px 30px;
+    border: none;
+    background: #39bdef;
+    color: #000;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact form button:hover {
+    background: #fff;
+    color: #000;
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.stories {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.stories-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.story {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #39bdef;
+    transition: transform 0.3s;
+}
+
+.story img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.story:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center; /* Centra los elementos de la lista en la columna */
+        padding: 0; /* Asegúrate de que no haya padding adicional */
+    }
+}
+
+.footer-link {
+    color: inherit; /* Hereda el color del texto circundante */
+    text-decoration: underline; /* Subrayado por defecto */
+}
+
+.footer-link:hover {
+    color: #39bdef; /* Color del enlace al pasar el ratón */
+}
+
+h1 span {
+    display: inline-block;
+    animation: colorChange 1s infinite;
+    color: white;
+}
+
+@keyframes colorChange {
+    0%, 100% { color: white; }
+    50% { color: #39bdef; }
+}
+
+
+.navbar ul li a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #39bdef;
+    transform: scale(1.4);
+}
+
+@media screen and (max-width: 768px) {
+    .story {
+        width: calc(50% - 10px);
+    }
+
+    .photo-gallery img {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .story {
+        width: 100%;
+    }
+
+    .photo-gallery img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .photo-gallery img {
+        width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+}
+
+.spotify-embed-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px; /* Añade algo de espacio alrededor del iframe */
+}
+
+.spotify-embed {
+    border-radius: 12px;
+    width: 60%;
+    max-width: 850px; /* Cambia este valor para ajustar el tamaño máximo */
+    height: 152px; /* Altura definida en el HTML */
+    background-color: #181818; /* Fondo del iframe */
+    border: 2px solid #39bdef; /* Borde del iframe */
+}
+
+@media (max-width: 768px) {
+    .spotify-embed {
+        width: auto; /* Ajusta el ancho en pantallas pequeñas */
+        height: 152px; /* Mantiene la altura definida */
+    }
+}
+
+@media (max-width: 480px) {
+    .spotify-embed {
+        width: auto; /* Ajusta el ancho para pantallas muy pequeñas */
+        height: 152px; /* Mantiene la altura definida */
+    }
+}
