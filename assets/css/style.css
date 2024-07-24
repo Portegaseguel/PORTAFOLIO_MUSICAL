@@ -411,7 +411,8 @@ h1 span {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 20px; /* Añade algo de espacio alrededor del iframe */
+    padding: 0px; /* Añade algo de espacio alrededor del iframe */
+    box-sizing: border-box;
 }
 
 .spotify-embed {
@@ -434,5 +435,39 @@ h1 span {
     .spotify-embed {
         width: auto; /* Ajusta el ancho para pantallas muy pequeñas */
         height: 152px; /* Mantiene la altura definida */
+    }
+}
+
+
+/* Tarjeta "About" y "Events" a ancho completo en pantallas pequeñas */
+@media (max-width: 768px) {
+    .about, .events {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+/* Div de Spotify centrado en pantallas pequeñas */
+@media (max-width: 768px) {
+    .spotify-embed-wrapper {
+        justify-content: center;
+    }
+
+    .spotify-embed {
+        width: 100%;
+    }
+}
+
+/* Sección "Contact" a ancho completo en pantallas pequeñas */
+@media (max-width: 768px) {
+    .contact {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .contact form {
+        width: 100%;
     }
 }
