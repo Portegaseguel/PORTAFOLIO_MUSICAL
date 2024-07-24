@@ -471,3 +471,12 @@ h1 span {
         width: 100%;
     }
 }
+
+/* Tarjeta "photos" a ancho completo en pantallas pequeñas */
+@media (max-width: 768px) {
+    .photos, .music {
+        margin-left: 1px;
+        margin-right: 1px;
+        width: 100%;
+    }
+}
